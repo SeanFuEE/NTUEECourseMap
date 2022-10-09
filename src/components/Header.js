@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Searchbar from "./Searchbar"
+//import Searchbar from "./Searchbar"
 import * as headerStyles from "../styles/components/header.module.scss"
 
 export default function Header(props) {
@@ -18,7 +18,6 @@ export default function Header(props) {
         <Link to="/">
           <h1>{props.title}</h1>
         </Link>
-        {props.page != "info" && <Searchbar page={props.page} />}
 
         <div>
           <h1>
