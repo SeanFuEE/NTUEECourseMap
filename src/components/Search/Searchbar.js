@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom"
 
 import TextField from "@mui/material/TextField"
 import useBlogData from "../../static_queries/useBlogData"
+import * as searchbarStyle from "../../styles/components/Searchbar.scss"
 let data = [
   "計算機程式",
   "電路學",
@@ -49,13 +50,14 @@ export default function Searchbar(props) {
       <TextField
         label="search"
         variant="outlined"
-        className="form-control form-control-lg"
+        className={"form-control form-control-lg " + searchbarStyle.textfield}
         placeholder="Search"
         onChange={(event) => {
           setInputText(event.target.value)
         }}
         onKeyPress={handleChange}
         type="text"
+        style={{ margin: "10px" }}
       />
       <ul className="list-group">{filterList()}</ul>
     </div>
